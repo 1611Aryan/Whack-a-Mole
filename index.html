@@ -9,6 +9,20 @@
     <script src="https://kit.fontawesome.com/ea6e17d3b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="start">
+        <p id="disclaimer">
+            The Game Starts In
+        </p>
+        <p id="countDown1">
+            3
+      </p>
+        <p id="countDown2">
+            2
+        </p>
+        <p id="countDown3">
+            1
+        </p>
+    </div>
     <div id="navBar">
         <ul id="nav">
             <li class="a">Whack a Mole</li>
@@ -41,6 +55,28 @@
     <script type="text/javascript">
         // JavaScript Document
         var i=0;
+        function disappear()
+            {
+                setTimeout((function(){
+                    $('#start').css("display","none");
+                    $('#navBar').css("display","block");
+                    $('#background').css("display","block");
+                }),4000);
+            }
+        function build()
+            {
+                setTimeout((function(){
+                    $('#countDown1').css("display","inline");
+                }),1000);
+                setTimeout((function(){
+                    $('#countDown1').css("display","none");
+                    $('#countDown2').css("display","inline");
+                }),2000);
+                setTimeout((function(){
+                    $('#countDown2').css("display","none");
+                    $('#countDown3').css("display","inline");
+                }),3000);
+            }
         //if not clicked then vanish
         function bye1()
             {
@@ -155,7 +191,7 @@
         $('#loc3').click(function(){
             $('#loc3').fadeOut("fast","swing");
             clearTimeout(zzz3);
-            i-i+1;
+            i=i+1;
             $('#score').html(i);
         });
         $('#loc4').click(function(){
@@ -171,7 +207,7 @@
             i=i+1;
             $('#score').html(i);
             
-        });
+        })
         $('#loc6').click(function(){
             $('#loc6').fadeOut("fast","swing");
             clearTimeout(zzz6);
@@ -182,9 +218,11 @@
 
         function delay()
         {
-                setTimeout(appear,2000);
+                setTimeout(appear,5000);
         }
-
+        
+        disappear();
+        build();
         delay();
         
     </script>

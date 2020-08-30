@@ -5,7 +5,47 @@ body
     margin:0px;
     padding:0px;
     cursor: url("../Img/Untitled-3.png"), auto;
+}
+#disclaimer
+{
+    display:inline-block;
+    color:white;
+    font-size:100px;
+    padding:5% 21% 0%;  
+}
+#countDown1
+{
+    display:none;
+    color:goldenrod;
+    font-size:90px;
+    padding:0% 48% 0%;
+}
+#countDown2
+{
+    display:none;
+    color:goldenrod;
+    font-size:90px;
+    padding:0% 48% 0%;
+}
+#countDown3
+{
+    display:none;
+    color:goldenrod;
+    font-size:90px;
+    padding:0% 48% 0%;
     
+}
+#start
+{
+    background-color:hsla(0,0%,0%,0.82);
+    height:760px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+#background
+{
+    display:none;
 }
 #navBar
 {
@@ -13,6 +53,7 @@ body
     height:80px;
     width:100%;
     padding:0px;
+    display:none;
 }
 #nav
 {
@@ -45,7 +86,7 @@ li
 #size
 {
     width:100%;
-    height: 676.399px;
+    height: 680px;
 }
 .mole
 {
