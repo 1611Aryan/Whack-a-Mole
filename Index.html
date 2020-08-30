@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Whack a Mole</title>
+    <link type="text/css" rel="stylesheet" href="CSS/Untitled-2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../Jquery/jquery.min.js"></script> 
+    <script src="https://kit.fontawesome.com/ea6e17d3b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="navBar">
+        <ul id="nav">
+            <li class="a">Whack a Mole</li>
+            <li><i class="fas fa-trophy"></i> Score:<p id="score"></p></li>
+            <li><i class="far fa-clock"></i> Time Left:<p id="time"></p></li>
+            <li>Retry <i class="fas fa-undo"></i></li>
+        </ul>
+    </div>
+    <div id="background">
+        <img id="size" src="Img/Untitled-1.png">
+    <div id="loc1">
+        <img class="mole" src="Img/2x/Diglet@2x.png">
+    </div>
+    <div id="loc2">
+        <img class="mole" src="Img/2x/Diglet@2x.png">
+    </div>
+    <div id="loc3">
+        <img class="mole" src="Img/2x/Diglet@2x.png">
+    </div>
+    <div id="loc4">
+        <img class="mole" src="Img/2x/Diglet@2x.png">
+    </div>
+    <div id="loc5">
+        <img class="mole" src="Img/2x/Diglet@2x.png">
+    </div>
+    <div id="loc6">
+        <img class="mole" src="Img/2x/Diglet@2x.png">
+    </div>
+    </div>
+    <script type="text/javascript">
+        // JavaScript Document
+        var i=0;
+        //if not clicked then vanish
+        function bye1()
+            {
+                    $('#loc1').css("display","none");
+                    delay2();
+            }
+        function bye2()
+            {
+                    $('#loc2').css("display","none");
+                    delay2();
+            }
+        function bye3()
+            {
+                    $('#loc3').css("display","none");
+                    delay2();
+            }
+        function bye4()
+            {
+                    $('#loc4').css("display","none");
+                    delay2();
+            }
+        function bye5()
+            {
+                    $('#loc5').css("display","none");
+                    delay2();
+            }
+        function bye6()
+            {
+                    $('#loc6').css("display","none");
+                    delay2();
+            }
+        //Vanish AFTER
+        function zzz1()
+        {
+            setTimeout(bye1,1000);
+        }
+        function zzz2()
+        {
+            setTimeout(bye2,1000);
+        }
+        function zzz3()
+        {
+            setTimeout(bye3,1000);
+        }
+        function zzz4()
+        {
+            setTimeout(bye4,1000);
+        }
+        function zzz5()
+        {
+            setTimeout(bye5,1000);
+        }
+        function zzz6()
+        {
+            setTimeout(bye6,1000);
+        }
+        
+        function appear()
+            {
+                var rand=Math.floor(Math.random()*6) +1;
+                if (rand==1)
+                {
+                    $('#loc1').css("display","block");
+                    zzz1(); 
+                } 
+                if (rand==2)
+                {
+                    $('#loc2').css("display","block"); 
+                    zzz2();    
+                } 
+                if (rand==3)
+                {
+                    $('#loc3').css("display","block");
+                    zzz3();   
+                } 
+                if (rand==4)
+                {
+                    $('#loc4').css("display","block"); 
+                    zzz4();    
+                } 
+                if (rand==5)
+                {
+                    $('#loc5').css("display","block");
+                    zzz5();   
+                } 
+                if (rand==6)
+                {
+                    $('#loc6').css("display","block"); 
+                    zzz6();   
+                }
+                }
+        function delay2()
+            {
+                setTimeout(appear,Math.random()*500);
+            }
+
+        //Upon Clicking
+        $('#loc1').click(function(){
+            $('#loc1').fadeOut("fast","swing");
+            clearTimeout(zzz1);
+            i=i+1;
+            $('#score').html(i);
+            
+        });
+        $('#loc2').click(function(){
+            $('#loc2').fadeOut("fast","swing");
+            clearTimeout(zzz2);
+            i=i+1;
+            $('#score').html(i);
+            
+        });
+        $('#loc3').click(function(){
+            $('#loc3').fadeOut("fast","swing");
+            clearTimeout(zzz3);
+            i-i+1;
+            $('#score').html(i);
+        });
+        $('#loc4').click(function(){
+            $('#loc4').fadeOut("fast","swing");
+            clearTimeout(zzz4);
+            i=i+1;
+            $('#score').html(i);
+            
+        });
+        $('#loc5').click(function(){
+            $('#loc5').fadeOut("fast","swing");
+            clearTimeout(zzz5);
+            i=i+1;
+            $('#score').html(i);
+            
+        });
+        $('#loc6').click(function(){
+            $('#loc6').fadeOut("fast","swing");
+            clearTimeout(zzz6);
+            i=i+1;
+            $('#score').html(i);
+            
+        });
+
+        function delay()
+        {
+                setTimeout(appear,2000);
+        }
+
+        delay();
+        
+    </script>
+</body>
+</html>
