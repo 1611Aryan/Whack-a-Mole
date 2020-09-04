@@ -83,6 +83,14 @@ li
 {
     display:inline;
 }
+#button
+{
+    font-size:35px;
+    color:white;
+    border:none;
+    background-color:transparent;
+    cursor: grab;
+}
 #size
 {
     width:100%;

@@ -1,6 +1,30 @@
-// JavaScript Document
+        // JavaScript Document
         var i=0;
-        //if not clicked then vanish
+        var j=0;
+        //intro
+        function disappear()
+            {
+                setTimeout((function(){
+                    $('#start').css("display","none");
+                    $('#navBar').css("display","block");
+                    $('#background').css("display","block");
+                }),4000);
+            }
+        function build()
+            {
+                setTimeout((function(){
+                    $('#countDown1').css("display","inline");
+                }),1000);
+                setTimeout((function(){
+                    $('#countDown1').css("display","none");
+                    $('#countDown2').css("display","inline");
+                }),2000);
+                setTimeout((function(){
+                    $('#countDown2').css("display","none");
+                    $('#countDown3').css("display","inline");
+                }),3000);
+            }
+        //if not clicked then vanish diglet
         function bye1()
             {
                     $('#loc1').css("display","none");
@@ -34,27 +58,27 @@
         //Vanish AFTER
         function zzz1()
         {
-            setTimeout(bye1,1000);
+            var zz1=setTimeout(bye1,1000);
         }
         function zzz2()
         {
-            setTimeout(bye2,1000);
+            var zz2=setTimeout(bye2,1000);
         }
         function zzz3()
         {
-            setTimeout(bye3,1000);
+            var zz3=setTimeout(bye3,1000);
         }
         function zzz4()
         {
-            setTimeout(bye4,1000);
+            var zz4=setTimeout(bye4,1000);
         }
         function zzz5()
         {
-            setTimeout(bye5,1000);
+            var zz5=setTimeout(bye5,1000);
         }
         function zzz6()
         {
-            setTimeout(bye6,1000);
+            var zz6=setTimeout(bye6,1000);
         }
         
         function appear()
@@ -64,81 +88,102 @@
                 {
                     $('#loc1').css("display","block");
                     zzz1(); 
+                    j++;
                 } 
                 if (rand==2)
                 {
                     $('#loc2').css("display","block"); 
-                    zzz2();    
+                    zzz2();  
+                    j++;
                 } 
                 if (rand==3)
                 {
                     $('#loc3').css("display","block");
-                    zzz3();   
+                    zzz3();  
+                    j++;
                 } 
                 if (rand==4)
                 {
                     $('#loc4').css("display","block"); 
-                    zzz4();    
+                    zzz4(); 
+                    j++;
                 } 
                 if (rand==5)
                 {
                     $('#loc5').css("display","block");
                     zzz5();   
+                    j++;
                 } 
                 if (rand==6)
                 {
                     $('#loc6').css("display","block"); 
-                    zzz6();   
+                    zzz6();
+                    j++;
                 }
                 }
         function delay2()
             {
                 setTimeout(appear,Math.random()*500);
             }
-
-        //Upon Clicking
-        $('#loc1').click(function(){
+        function score1()
+        {
             $('#loc1').fadeOut("fast","swing");
-            clearTimeout(zzz1);
             i=i+1;
-            alert("1");
-            //delay1();
-        });
-        $('#loc2').click(function(){
+            $('#score').html(i);
+        }
+        function score2()
+        {
             $('#loc2').fadeOut("fast","swing");
-            clearTimeout(zzz2);
             i=i+1;
-            //delay1();
-        });
-        $('#loc3').click(function(){
+            $('#score').html(i);
+        }
+        function score3()
+        {
             $('#loc3').fadeOut("fast","swing");
-            clearTimeout(zzz3);
-            i-i+1;
-        });
-        $('#loc4').click(function(){
+            i=i+1;
+            $('#score').html(i);
+        }
+        function score4()
+        {
             $('#loc4').fadeOut("fast","swing");
-            clearTimeout(zzz4);
             i=i+1;
-            //delay1();
-        });
-        $('#loc5').click(function(){
+            $('#score').html(i);
+        }
+        function score5()
+        {
             $('#loc5').fadeOut("fast","swing");
-            clearTimeout(zzz5);
             i=i+1;
-            //delay1();
-        });
-        $('#loc6').click(function(){
+            $('#score').html(i);
+        }
+        function score6()
+        {
             $('#loc6').fadeOut("fast","swing");
-            clearTimeout(zzz6);
             i=i+1;
-            //delay1();
-        });
-
+            $('#score').html(i);
+        }
+        function reload()
+        {
+            setTimeout(location.reload(),500);
+        }
         function delay()
         {
-                setTimeout(appear,2000);
-                setTimeout((function(){$('#score').html(i);}),12000);
+            setTimeout(appear,5000);
+        } 
+        var timeLeft=34;
+        var timer=setInterval(decrement,1000);
+        function decrement()
+        {
+            if(timeLeft==-1)
+                {
+                    clearInterval(timer);
+                    alert(j);
+                }
+            else
+            {
+                $('#time').html(timeLeft+'s');
+                timeLeft--;
+            }
         }
-
+        disappear();
+        build();
         delay();
-        

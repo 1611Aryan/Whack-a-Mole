@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <script type="text/javascript" src="Jquery/jquery.min.js"></script> 
     <script src="https://kit.fontawesome.com/ea6e17d3b1.js" crossorigin="anonymous"></script>
+    <script src="JavaScript/Algo1.js" type="text/javascript"></script>
 </head>
 <body>
     <div id="start">
@@ -27,204 +28,30 @@
         <ul id="nav">
             <li class="a">Whack a Mole</li>
             <li><i class="fas fa-trophy"></i> Score:<p id="score"></p></li>
-            <li><i class="far fa-clock"></i> Time Left:<p id="time"></p></li>
-            <li>Retry <i class="fas fa-undo"></i></li>
+            <li><i class="far fa-clock"></i> Time Left: <p id="time"></p></li>
+            <li>Retry <button onClick="reload()" id="button"><i class="fas fa-undo"></i></button></li>
         </ul>
     </div>
     <div id="background">
         <img id="size" src="Img/Untitled-1.png">
-    <div id="loc1">
+    <div id="loc1" onClick="score1()">
         <img class="mole" src="Img/2x/Diglet@2x.png">
     </div>
-    <div id="loc2">
+    <div id="loc2" onClick="score2()">
         <img class="mole" src="Img/2x/Diglet@2x.png">
     </div>
-    <div id="loc3">
+    <div id="loc3" onClick="score3()">
         <img class="mole" src="Img/2x/Diglet@2x.png">
     </div>
-    <div id="loc4">
+    <div id="loc4" onClick="score4()">
         <img class="mole" src="Img/2x/Diglet@2x.png">
     </div>
-    <div id="loc5">
+    <div id="loc5" onClick="score5()">
         <img class="mole" src="Img/2x/Diglet@2x.png">
     </div>
-    <div id="loc6">
+    <div id="loc6" onClick="score6()">
         <img class="mole" src="Img/2x/Diglet@2x.png">
     </div>
     </div>
-    <script type="text/javascript">
-        // JavaScript Document
-        var i=0;
-        function disappear()
-            {
-                setTimeout((function(){
-                    $('#start').css("display","none");
-                    $('#navBar').css("display","block");
-                    $('#background').css("display","block");
-                }),4000);
-            }
-        function build()
-            {
-                setTimeout((function(){
-                    $('#countDown1').css("display","inline");
-                }),1000);
-                setTimeout((function(){
-                    $('#countDown1').css("display","none");
-                    $('#countDown2').css("display","inline");
-                }),2000);
-                setTimeout((function(){
-                    $('#countDown2').css("display","none");
-                    $('#countDown3').css("display","inline");
-                }),3000);
-            }
-        //if not clicked then vanish
-        function bye1()
-            {
-                    $('#loc1').css("display","none");
-                    delay2();
-            }
-        function bye2()
-            {
-                    $('#loc2').css("display","none");
-                    delay2();
-            }
-        function bye3()
-            {
-                    $('#loc3').css("display","none");
-                    delay2();
-            }
-        function bye4()
-            {
-                    $('#loc4').css("display","none");
-                    delay2();
-            }
-        function bye5()
-            {
-                    $('#loc5').css("display","none");
-                    delay2();
-            }
-        function bye6()
-            {
-                    $('#loc6').css("display","none");
-                    delay2();
-            }
-        //Vanish AFTER
-        function zzz1()
-        {
-            setTimeout(bye1,1000);
-        }
-        function zzz2()
-        {
-            setTimeout(bye2,1000);
-        }
-        function zzz3()
-        {
-            setTimeout(bye3,1000);
-        }
-        function zzz4()
-        {
-            setTimeout(bye4,1000);
-        }
-        function zzz5()
-        {
-            setTimeout(bye5,1000);
-        }
-        function zzz6()
-        {
-            setTimeout(bye6,1000);
-        }
-        
-        function appear()
-            {
-                var rand=Math.floor(Math.random()*6) +1;
-                if (rand==1)
-                {
-                    $('#loc1').css("display","block");
-                    zzz1(); 
-                } 
-                if (rand==2)
-                {
-                    $('#loc2').css("display","block"); 
-                    zzz2();    
-                } 
-                if (rand==3)
-                {
-                    $('#loc3').css("display","block");
-                    zzz3();   
-                } 
-                if (rand==4)
-                {
-                    $('#loc4').css("display","block"); 
-                    zzz4();    
-                } 
-                if (rand==5)
-                {
-                    $('#loc5').css("display","block");
-                    zzz5();   
-                } 
-                if (rand==6)
-                {
-                    $('#loc6').css("display","block"); 
-                    zzz6();   
-                }
-                }
-        function delay2()
-            {
-                setTimeout(appear,Math.random()*500);
-            }
-
-        //Upon Clicking
-        $('#loc1').click(function(){
-            $('#loc1').fadeOut("fast","swing");
-            clearTimeout(zzz1);
-            i=i+1;
-            $('#score').html(i);
-            
-        });
-        $('#loc2').click(function(){
-            $('#loc2').fadeOut("fast","swing");
-            clearTimeout(zzz2);
-            i=i+1;
-            $('#score').html(i);
-            
-        });
-        $('#loc3').click(function(){
-            $('#loc3').fadeOut("fast","swing");
-            clearTimeout(zzz3);
-            i=i+1;
-            $('#score').html(i);
-        });
-        $('#loc4').click(function(){
-            $('#loc4').fadeOut("fast","swing");
-            clearTimeout(zzz4);
-            i=i+1;
-            $('#score').html(i);
-            
-        });
-        $('#loc5').click(function(){
-            $('#loc5').fadeOut("fast","swing");
-            clearTimeout(zzz5);
-            i=i+1;
-            $('#score').html(i);
-            
-        })
-        $('#loc6').click(function(){
-            $('#loc6').fadeOut("fast","swing");
-            clearTimeout(zzz6);
-            i=i+1;
-            $('#score').html(i);
-            
-        });
-
-        function delay()
-        {
-                setTimeout(appear,5000);
-        }
-        
-        disappear();
-        build();
-        delay();
-        
-    </script>
 </body>
 </html>
