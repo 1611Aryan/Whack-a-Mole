@@ -86,40 +86,83 @@
                 var rand=Math.floor(Math.random()*6) +1;
                 if (rand==1)
                 {
-                    $('#loc1').css("display","block");
-                    zzz1(); 
-                    j++;
+                    if(timeLeft==0)
+                        {
+                            return;
+                        }
+                    else
+                        {
+                            $('#loc1').css("display","block");
+                            zzz1(); 
+                            j++;
+                        }
                 } 
                 if (rand==2)
                 {
-                    $('#loc2').css("display","block"); 
-                    zzz2();  
-                    j++;
+                    if(timeLeft==0)
+                        {
+                            return;
+                        }
+                    else
+                        {
+                            $('#loc2').css("display","block");
+                            zzz2(); 
+                            j++;
+                        }
                 } 
-                if (rand==3)
+                 if (rand==3)
                 {
-                    $('#loc3').css("display","block");
-                    zzz3();  
-                    j++;
+                    if(timeLeft==0)
+                        {
+                            return;
+                        }
+                    else
+                        {
+                            $('#loc3').css("display","block");
+                            zzz3(); 
+                            j++;
+                        }
                 } 
-                if (rand==4)
+                 if (rand==4)
                 {
-                    $('#loc4').css("display","block"); 
-                    zzz4(); 
-                    j++;
+                    if(timeLeft==0)
+                        {
+                            return;
+                        }
+                    else
+                        {
+                            $('#loc4').css("display","block");
+                            zzz4(); 
+                            j++;
+                        }
                 } 
-                if (rand==5)
+                 if (rand==5)
                 {
-                    $('#loc5').css("display","block");
-                    zzz5();   
-                    j++;
+                    if(timeLeft==0)
+                        {
+                            return;
+                        }
+                    else
+                        {
+                            $('#loc5').css("display","block");
+                            zzz5(); 
+                            j++;
+                        }
                 } 
-                if (rand==6)
+                 if (rand==6)
                 {
-                    $('#loc6').css("display","block"); 
-                    zzz6();
-                    j++;
-                }
+                    if(timeLeft==0)
+                        {
+                            return;
+                        }
+                    else
+                        {
+                            $('#loc6').css("display","block");
+                            zzz6(); 
+                            j++;
+                        }
+                } 
+                
                 }
         function delay2()
             {
@@ -173,10 +216,11 @@
         var timer=setInterval(decrement,1000);
         function decrement()
         {
-            if(timeLeft==-1)
+            if(timeLeft==0)
                 {
                     clearInterval(timer);
-                    alert(j);
+                    
+                    $('#time').html(timeLeft+'s');
                 }
             else
             {

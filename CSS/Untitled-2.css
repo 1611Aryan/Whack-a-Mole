@@ -37,11 +37,11 @@ body
 }
 #start
 {
-    background-color:hsla(0,0%,0%,0.82);
-    height:760px;
-    width:100%;
-    margin:0px;
-    padding:0px;
+    height:760px;    
+    background-image:url("../Img/Annotation 2020-09-04 190954.png"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
 }
 #background
 {
