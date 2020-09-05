@@ -145,6 +145,7 @@ function disappear()
                 {
                     if(miss==3)
                         {
+                            result();
                             return;
                         }
                     else
@@ -159,6 +160,7 @@ function disappear()
                 {
                     if(miss==3)
                         {
+                            result();
                             return;
                         }
                     else
@@ -173,6 +175,7 @@ function disappear()
                 {
                     if(miss==3)
                         {
+                            result();
                             return;
                         }
                     else
@@ -187,6 +190,7 @@ function disappear()
                 {
                     if(miss==3)
                         {
+                            result();
                             return;
                         }
                     else
@@ -201,6 +205,7 @@ function disappear()
                 {
                     if(miss==3)
                         {
+                            result();
                             return;
                         }
                     else
@@ -215,6 +220,7 @@ function disappear()
                 {
                     if(miss==3)
                         {
+                            result();
                             return;
                         }
                     else
@@ -233,7 +239,7 @@ function disappear()
             }
         function score1()
             {
-                $('#loc1').fadeOut("fast","swing");
+                $('#loc1').hide();
                 i=i+1;
                 k=false;
                 $('#score').html(i);
@@ -241,7 +247,7 @@ function disappear()
             }
         function score2()
             {
-                $('#loc2').fadeOut("fast","swing");
+                $('#loc2').hide();
                 i=i+1;
                 k=false;
                 $('#score').html(i);
@@ -249,7 +255,7 @@ function disappear()
             }
         function score3()
             {
-                $('#loc3').fadeOut("fast","swing");
+                $('#loc3').hide();
                 i=i+1;
                 k=false;
                 $('#score').html(i);
@@ -257,7 +263,7 @@ function disappear()
             }
         function score4()
             {
-                $('#loc4').fadeOut("fast","swing");
+                $('#loc4').hide();
                 i=i+1;
                 k=false;
                 $('#score').html(i);
@@ -265,7 +271,7 @@ function disappear()
             }
         function score5()
             {
-                $('#loc5').fadeOut("fast","swing");
+                $('#loc5').hide();
                 i=i+1;
                 k=false;
                 $('#score').html(i);
@@ -273,7 +279,7 @@ function disappear()
             }
         function score6()
             {
-                $('#loc6').fadeOut("fast","swing");
+                $('#loc6').hide();
                 i=i+1;
                 k=false;
                 $('#score').html(i);
@@ -311,19 +317,6 @@ function disappear()
                 $('#background').hide();
                 $("#disclaimer").html("Your Score is: "+i+"/"+j);
                 disappear();
-            }
-        function aftermath()
-            {
-                if(i>=j-5)
-                    {
-                        result();
-                        //alert("Hi");
-                    }
-                else
-                    {
-                        result();
-                        alert("Loser");
-                    }
             }
         disappear();
         build();
