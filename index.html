@@ -17,6 +17,11 @@
   <p id="countDown1"> 3 </p>
   <p id="countDown2"> 2 </p>
   <p id="countDown3"> 1 </p>
+  <p id="restart">
+      <button onClick="reload()" id="button1">
+          <i class="fas fa-undo"></i>
+      </button>
+    </p>
 </div>
 <!--NavBar-->
 <div id="navBar">
@@ -25,8 +30,8 @@
     <li><i class="fas fa-trophy"></i> Score:
       <p id="score"></p>
     </li>
-    <li><i class="far fa-clock"></i> Time Left:
-      <p id="time"></p>
+    <li><i class="fas fa-times color"></i> Missed:
+      <p id="lost">0</p>
     </li>
     <li>Retry
       <button onClick="reload()" id="button"><i class="fas fa-undo"></i></button>

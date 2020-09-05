@@ -1,33 +1,65 @@
 @charset "utf-8";
-/* CSS Document */
+/* CSS Document */ ::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #07617D;
+}
+::-webkit-scrollbar-thumb {
+  background: #a1e01f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1e05f;
+}
 body {
   margin: 0px;
   padding: 0px;
   cursor: url("../Img/Untitled-3.png"), auto;
 }
 #disclaimer {
-  display: inline-block;
+  position: relative;
+  top: 200px;
+  display: inline;
   color: white;
   font-size: 100px;
   padding: 5% 21% 0%;
 }
 #countDown1 {
+  position: relative;
+  top: 200px;
   display: none;
   color: goldenrod;
   font-size: 90px;
   padding: 0% 48% 0%;
 }
 #countDown2 {
+  position: relative;
+  top: 200px;
   display: none;
   color: goldenrod;
   font-size: 90px;
   padding: 0% 48% 0%;
 }
 #countDown3 {
+  position: relative;
+  top: 200px;
   display: none;
   color: goldenrod;
   font-size: 90px;
   padding: 0% 48% 0%;
+}
+#restart {
+  position: relative;
+  top: 220px;
+  display: none;
+  padding: 0% 46% 0%;
+}
+#button1 {
+  color: #ffffff;
+  font-size: 60px;
+  border: none;
+  background-color: transparent;
+  cursor: grab;
 }
 #start {
   height: 760px;
@@ -46,6 +78,9 @@ body {
   padding: 0px;
   display: none;
 }
+.color {
+  color: crimson;
+}
 #nav {
   list-style-type: none;
   font-size: 30px;
@@ -63,7 +98,7 @@ li {
   color: goldenrod;
   font-size: 35px;
 }
-#time {
+#lost {
   display: inline;
 }
 #score {
