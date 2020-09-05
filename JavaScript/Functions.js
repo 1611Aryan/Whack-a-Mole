@@ -271,6 +271,7 @@ function result() {
   $("#countDown3").css("font-size","70px");
   $('#message').css("display", "inline");
   $('#restart').css("display", "inline");
+  $('#trance').css("animation", "none");
 
 }
 disappear();
