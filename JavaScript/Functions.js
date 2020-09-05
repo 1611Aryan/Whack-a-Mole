@@ -266,8 +266,8 @@ function result() {
   $('#background').hide();
   $("#disclaimer").html("You Scored: " + i);
   $('#countDown3').html("Give it Another Go");
-  $("#disclaimer").css("padding", "5% 30% 0%");
-  $("#countDown3").css("padding", "0% 31%");
+  $("#disclaimer").css("padding", "5% 28% 0%");
+  $("#countDown3").css("padding", "0% 29.5%");
   $("#countDown3").css("font-size","70px");
   $('#message').css("display", "inline");
   $('#restart').css("display", "inline");
