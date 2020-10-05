@@ -1,202 +1,194 @@
 @charset "utf-8";
-/* CSS Document */ ::-webkit-scrollbar {
-  width: 5px;
+
+/* CSS Document */
+
+::-webkit-scrollbar {
+    width: 5px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #07617D;
+    background: #07617D;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #a1e01f;
+    background: #a1e01f;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1e05f;
+    background: #a1e05f;
 }
+
 body {
-  margin: 0px;
-  padding: 0px;
-  cursor: url("../Img/Untitled-3.png"), auto;
+    margin: 0px;
+    padding: 0px;
+    cursor: url("../Img/Untitled-3.png"), auto;
 }
+
 #disclaimer {
-  position: relative;
-  top: 200px;
-  display: inline;
-  color: white;
-  font-size: 100px;
-  padding: 5% 21% 0%;
+    position: relative;
+    top: 200px;
+    display: inline;
+    color: white;
+    font-size: 100px;
+    padding: 5% 21% 0%;
 }
+
 #countDown1 {
-  position: relative;
-  top: 200px;
-  display: none;
-  color: goldenrod;
-  font-size: 90px;
-  padding: 0% 48% 0%;
+    position: relative;
+    top: 200px;
+    display: none;
+    color: goldenrod;
+    font-size: 90px;
+    padding: 0% 48% 0%;
 }
+
 #countDown2 {
-  position: relative;
-  top: 200px;
-  display: none;
-  color: goldenrod;
-  font-size: 90px;
-  padding: 0% 48% 0%;
+    position: relative;
+    top: 200px;
+    display: none;
+    color: goldenrod;
+    font-size: 90px;
+    padding: 0% 48% 0%;
 }
+
 #countDown3 {
-  position: relative;
-  top: 200px;
-  display: none;
-  color: goldenrod;
-  font-size: 90px;
-  padding: 0% 48% 0%;
+    position: relative;
+    top: 200px;
+    display: none;
+    color: goldenrod;
+    font-size: 90px;
+    padding: 0% 48% 0%;
 }
+
 #restart {
-  position: relative;
-  top: 220px;
-  display: none;
-  padding: 0% 45% 0%;
+    position: relative;
+    top: 220px;
+    display: none;
+    padding: 0% 45% 0%;
 }
+
 #button1 {
-  color: #ffffff;
-  font-size: 60px;
-  border: none;
-  background-color: transparent;
-  cursor: grab;
+    color: #ffffff;
+    font-size: 60px;
+    border: none;
+    background-color: transparent;
+    cursor: grab;
 }
-#trance {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
-}
-@keyframes shake {
-  0% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  10% {
-    transform: translate(0px, -1px) rotate(-0.1deg);
-  }
-  20% {
-    transform: translate(-2px, -1px) rotate(0.1deg);
-  }
-  30% {
-    transform: translate(2px, 1px) rotate(0deg);
-  }
-  40% {
-    transform: translate(0px, -2px) rotate(0.1deg);
-  }
-  50% {
-    transform: translate(-2px, 1px) rotate(-0.1deg);
-  }
-  60% {
-    transform: translate(-2px, 2px) rotate(0deg);
-  }
-  70% {
-    transform: translate(2px, 0px) rotate(-0.1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(0.1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-0.1deg);
-  }
-}
+
 #start {
-  height: 760px;
-  background-image: url("../Img/Annotation 2020-09-04 190954.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    height: 760px;
+    background-image: url("../Img/Annotation 2020-09-04 190954.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
 #background {
-  display: none;
+    display: none;
 }
+
 #navBar {
-  background-color: #00746F;
-  height: 80px;
-  width: 100%;
-  padding: 0px;
-  display: none;
+    background-color: #00746F;
+    height: 80px;
+    width: 100%;
+    padding: 0px;
+    display: none;
 }
+
 .color {
-  color: crimson;
+    color: crimson;
 }
+
 #nav {
-  list-style-type: none;
-  font-size: 30px;
-  color: white;
-  font-family: 'Alata', sans-serif;
-  text-align: center;
-  margin: 0px;
-  padding: 17px 0px;
+    list-style-type: none;
+    font-size: 30px;
+    color: white;
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding: 17px 0px;
 }
+
 li {
-  float: left;
-  width: 24%;
+    float: left;
+    width: 24%;
 }
+
 .a {
-  color: goldenrod;
-  font-size: 35px;
+    color: goldenrod;
+    font-size: 35px;
 }
+
 #lost {
-  display: inline;
+    display: inline;
 }
+
 #score {
-  display: inline;
+    display: inline;
 }
+
 #button {
-  font-size: 35px;
-  color: white;
-  border: none;
-  background-color: transparent;
-  cursor: grab;
+    font-size: 35px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    cursor: grab;
 }
+
 #size {
-  width: 100%;
-  height: 680px;
+    width: 100%;
+    height: 680px;
 }
+
 .mole {
-  height: 200px;
-  width: 230px;
+    height: 200px;
+    width: 230px;
 }
+
 #loc1 {
-  position: absolute;
-  top: 95px;
-  left: 123px;
-  display: none;
-  cursor: url("../Img/Untitled-4.png"), auto;
+    position: absolute;
+    top: 95px;
+    left: 123px;
+    display: none;
+    cursor: url("../Img/Untitled-4.png"), auto;
 }
+
 #loc2 {
-  position: absolute;
-  top: 95px;
-  left: 675px;
-  display: none;
-  cursor: url("../Img/Untitled-4.png"), auto;
+    position: absolute;
+    top: 95px;
+    left: 675px;
+    display: none;
+    cursor: url("../Img/Untitled-4.png"), auto;
 }
+
 #loc3 {
-  position: absolute;
-  top: 95px;
-  left: 1190px;
-  display: none;
-  cursor: url("../Img/Untitled-4.png"), auto;
+    position: absolute;
+    top: 95px;
+    left: 1190px;
+    display: none;
+    cursor: url("../Img/Untitled-4.png"), auto;
 }
+
 #loc4 {
-  position: absolute;
-  top: 405px;
-  left: 123px;
-  display: none;
-  cursor: url("../Img/Untitled-4.png"), auto;
+    position: absolute;
+    top: 405px;
+    left: 123px;
+    display: none;
+    cursor: url("../Img/Untitled-4.png"), auto;
 }
+
 #loc5 {
-  position: absolute;
-  top: 405px;
-  left: 665px;
-  display: none;
-  cursor: url("../Img/Untitled-4.png"), auto;
+    position: absolute;
+    top: 405px;
+    left: 665px;
+    display: none;
+    cursor: url("../Img/Untitled-4.png"), auto;
 }
+
 #loc6 {
-  position: absolute;
-  top: 405px;
-  left: 1190px;
-  display: none;
-  cursor: url("../Img/Untitled-4.png"), auto;
+    position: absolute;
+    top: 405px;
+    left: 1190px;
+    display: none;
+    cursor: url("../Img/Untitled-4.png"), auto;
 }
